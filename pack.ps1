@@ -33,7 +33,7 @@ foreach ($url in $UrlWitchCachePath.Keys) {
 
 # 使用 tar 解压文件
 Write-Host "Extracting AdGuardHome..."
-foreach ($url in $UrlWitchCachePath.Keys) {
+ ($url in $UrlWitchCachePath.Keys) {
   $CachePath = $UrlWitchCachePath[$url]
   if ($CachePath -match 'AdGuardHome_linux_(arm64|armv7)\.tar\.gz$') {
     $ExtractDir = "./cache/" + $matches[1]
